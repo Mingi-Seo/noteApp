@@ -13,3 +13,5 @@ function autoLoad(event)
 $('#contents').on('keyup', autoSave);
 
 $(window).on('load', autoLoad);
+
+$('contents').summernote();
