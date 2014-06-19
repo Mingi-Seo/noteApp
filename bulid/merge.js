@@ -7,4 +7,13 @@ var all = data1 + data2;
 
 fs.writeFileSync('all.js', all);
 
-console.log("good!");
+new compressor.minify(
+{
+	type: 'uglifyjs',
+	fileIn: 'all.js',
+	fileOut: 'all.min.js',
+	callback: function(err, min)
+	{
+		console.log("good!");
+	}
+});
